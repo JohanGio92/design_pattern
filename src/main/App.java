@@ -8,9 +8,15 @@ public class App {
 		
 		Profesor profesor = new Profesor("johan","revilla",5);
 		
-		profesor.setNombre("valeria");
+		composicion.Profesor profesorComposicion =
+				new composicion.Profesor("valeria", "saavedra", 28);
+		
+		profesor.setNombre("omar");
 		
 		System.out.println(profesor.getNombre());
+		
+		profesorComposicion.setNombre("alex");
+		System.out.println(profesorComposicion.getNombre());
 
 	}
 
