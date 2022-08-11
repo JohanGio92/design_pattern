@@ -1,2 +1,2 @@
-# design_pattern
+# Design Pattern
 Patrones de diseño implementeado por Johan Revilla
