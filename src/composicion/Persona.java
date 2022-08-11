@@ -1,6 +1,6 @@
 package composicion;
 
-public abstract class Persona {
+public class Persona {
 	
 	private String nombre;
 	private String apellido;
@@ -14,8 +14,8 @@ public abstract class Persona {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.doSomething();
+	public void setNombre(String nombre, DoSomethingAble doSomethingAble) {
+		doSomethingAble.doSomething();
 		this.nombre = nombre;
 	}
 
@@ -23,11 +23,9 @@ public abstract class Persona {
 		return apellido;
 	}
 
-	public void setApellido(String apellido) {
-		this.doSomething();
+	public void setApellido(String apellido, DoSomethingAble doSomethingAble) {
+		doSomethingAble.doSomething();
 		this.apellido = apellido;
 	}
-	
-	protected abstract void doSomething();
 	
 }
