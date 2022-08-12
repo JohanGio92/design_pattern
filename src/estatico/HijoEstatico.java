@@ -15,7 +15,8 @@ public class HijoEstatico extends PadreEstatico {
 	
 	public static void metodoD() {
 		//no se puede heredar un atributo y metodo estatico privado
-		System.out.println("soy un metodo D + B: " + PadreEstatico.B);
+		// PadreEstatico.B
+		System.out.println("soy un metodo D + B: ");
 	}
 
 }
