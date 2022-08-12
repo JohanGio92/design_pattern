@@ -26,6 +26,7 @@ public class Alumno extends Persona {
 		System.out.println("static: " + super.id);
 		System.out.println("static: " + Alumno.id);
 		System.out.println("static: " + this.id);
+		System.out.println(Object.class.getSimpleName());
 	}
 
 }
