@@ -1,9 +1,15 @@
 package main;
 
+import decoratorMIW.*;
+
 public class App {
 
 	public static void main(String[] args) {
-		System.out.println("hello world");
+		Component c = new ComponentA();
+        Component da = new DecoratorA(c);
+        System.out.println(da.view());
+        System.out.println(new DecoratorB(c).view());
+        System.out.println(new DecoratorB(da).view());
 	}
 
 }
