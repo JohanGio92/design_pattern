@@ -1,9 +1,14 @@
 package main;
 
+import java.io.File;
+
 import configuracion.ASingleton;
 import configuracion.Singleton;
 import estatico.HijoEstatico;
 import estatico.PadreEstatico;
+import figure.Circulo;
+import figure.Cuadrado;
+import figure.Figure;
 import persona.Alumno;
 import persona.PersonRegistry;
 import persona.Persona;
@@ -29,6 +34,13 @@ public class App {
 		//Persona.instance().setNombre("johan");
 		
 		Alumno.instance().setNombre("johan");
+		Profesor.instance().setNombre("omar");
 		System.out.println(Alumno.instance().getNombre());
+		System.out.println(Profesor.instance().getNombre());
+		System.out.println(Alumno.instance());
+		System.out.println(Profesor.instance());
+		Figure.instance().showFigure();
+		Cuadrado.instance().showFigure();
+		Circulo.instance().showFigure();
 	}
 }
