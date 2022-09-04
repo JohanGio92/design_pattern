@@ -5,12 +5,21 @@ import java.util.List;
 
 public class Subject {
 	
+	private static Subject instance;
+	
 	private List<Observer> observers;
 	private int state;
 	
-	public Subject() {
+	private Subject() {
 		this.observers = new ArrayList<>();
 		this.state = 0;
+	}
+	
+	public static Subject instance() {
+		if(instance == null) {
+			instance = new Subject();
+		}
+		return instance;
 	}
 
 	public int getState() {

@@ -8,12 +8,12 @@ public class ObserverPeruvianDollar extends Observer{
 	private double valorDeCambio = 3.25;
 	
 	public ObserverPeruvianDollar() {
-		subject.add(this);
+		Subject.instance().add(this);
 	}
 
 	@Override
 	public void update() {
-		System.out.println("PEN: " + (subject.getState() * valorDeCambio ));
+		System.out.println("PEN: " + (Subject.instance().getState() * valorDeCambio ));
 	}
 	
 }

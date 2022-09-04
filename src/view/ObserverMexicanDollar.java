@@ -8,12 +8,12 @@ public class ObserverMexicanDollar extends Observer{
 	private double valorCambio = 19.07;
 	
 	public ObserverMexicanDollar() {
-		this.subject.add(this);
+		Subject.instance().add(this);
 	}
 	
 	@Override
 	public void update() {		
-		System.out.println("MX: " + (subject.getState() * valorCambio));
+		System.out.println("MX: " + (Subject.instance().getState() * valorCambio));
 	}
 
 }
