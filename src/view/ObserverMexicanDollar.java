@@ -7,8 +7,7 @@ public class ObserverMexicanDollar extends Observer{
 	
 	private double valorCambio = 19.07;
 	
-	public ObserverMexicanDollar(Subject subject) {
-		this.subject = subject;
+	public ObserverMexicanDollar() {
 		this.subject.add(this);
 	}
 	

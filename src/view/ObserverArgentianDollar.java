@@ -6,8 +6,7 @@ import model.Subject;
 public class ObserverArgentianDollar extends Observer {
 	private double valorCambio = 29.86;
 
-	public ObserverArgentianDollar(Subject subject) {
-		this.subject = subject;
+	public ObserverArgentianDollar() {
 		this.subject.add(this);
 	}
 
