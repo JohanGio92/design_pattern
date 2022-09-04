@@ -7,7 +7,7 @@ public class ObserverArgentianDollar extends Observer {
 	private double valorCambio = 29.86;
 
 	public ObserverArgentianDollar() {
-		Subject.instance().add(this);
+		super();
 	}
 
 	@Override
