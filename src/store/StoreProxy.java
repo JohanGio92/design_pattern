@@ -4,49 +4,44 @@ import manager.Store;
 
 public class StoreProxy implements Store {
 
-	private Client client;
+	private LineState lineState;
 	
 	public StoreProxy() {
-		client = new Client();
+		try {
+			lineState = new OnLineState();
+		} catch (Exception e) {
+			lineState = new OffLineState();
+		}
 	}
 	
 	@Override
 	public void add(int code, int amount) {
-		client.println(FrameType.ADD.name());
-		client.println(code);
-		client.println(amount);
+		lineState.add(code, amount);
+		lineState = lineState.nextState();
 	}
 
 	@Override
 	public boolean exist(int code, int amount) {
-		client.println(FrameType.EXIST.name());
-		client.println(code);
-		client.println(amount);
-		return client.readBoolean();
+		boolean result = lineState.exist(code, amount);
+		lineState = lineState.nextState();
+		return result;
 	}
 
 	@Override
 	public void remove(int code, int amount) {
-		client.println(FrameType.REMOVE.name());
-		client.println(code);
-		client.println(amount);
+		lineState.remove(code, amount);
+		lineState = lineState.nextState();
 	}
 
 	@Override
 	public int[][] list() {
-		client.println(FrameType.LIST.name());
-		int[][] result = new int[0][2];
-			int lines = client.readInt();
-			result = new int[lines][2];
-			for(int i=0; i<lines; i++){
-				result[i][0] = client.readInt();
-				result[i][1] = client.readInt();
-			}
+		int[][] result = lineState.list();
+		lineState = lineState.nextState();
 		return result;
 	}
 	
 	public void close() {
-		client.close();
+		lineState.close();
 	}
 
 }

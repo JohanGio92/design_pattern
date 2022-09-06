@@ -69,4 +69,10 @@ public class Client {
 			ex.printStackTrace();
 		}
 	}
+
+	void readACK() throws Exception {
+		if (!in.readLine().equals(FrameType.ACK.name())) {
+			throw new Exception();
+		}
+	}
 }
