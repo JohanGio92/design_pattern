@@ -1,5 +1,6 @@
 package main;
 
+import flyweightAPAW.Extrisenca;
 import flyweightAPAW.Factory;
 import flyweightAPAW.FlyweightConcrete;
 
@@ -24,6 +25,13 @@ public class App {
 		for (int i = 0; i < flyweightConcrete.length; i++) {
 			System.out.println(flyweightConcrete[i].operation("<<"));
 		}
+		
+		Extrisenca extrisenca = new Extrisenca("---");
+		extrisenca.display();
+		extrisenca.setValue("<<");
+		extrisenca.display();
+		
+		System.out.println(extrisenca.isTheSame());
 	}
 
 }
