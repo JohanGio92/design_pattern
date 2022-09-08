@@ -11,6 +11,8 @@ public class App {
 		Persona persona = new Persona("johan", "revilla");
 		Alumno alumno = new Alumno("valeria", "saavedra", "95698");
 		alumno.setNombre("omar");
+		
+		System.out.println(Error.REPEATED_COORDINATE.getEnumValue());
 	}
 
 }
