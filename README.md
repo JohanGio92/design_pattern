@@ -87,19 +87,28 @@ Explain how to assemble objects and classes into larger structures, while keepin
 
 Please go to the branch `vendingmachine` to see its implementation.
 
+![command](img/command.svg)
+
 ### Memento
 
 Please go to the branch `memento` to see its implementation.
+
+![command](img/memento.svg)
 
 ### Observer
 
 Please go to the branch `observer` to see its implementation.
 
+![observer](img/observer.svg)
+
 ### Visitor
 
 Please go to the branch `visitor` to see its implementation.
+
+![visitor](img/visitor.svg)
 
 ### State
 
 Please go to the branch `vendingmachine` to see its implementation.
 
+![state](img/state.svg)
