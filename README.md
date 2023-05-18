@@ -43,15 +43,19 @@ Please go to the branch `singleton` to see its implementation.
 
 Please go to the branch `supermarket` to see its implementation.
 
-![singleton](img/builder.svg)
+![builder](img/builder.svg)
 
 ### Factory Method
 
 Please go to the branch `method_factory` to see its implementation.
 
+![factory method](img/factoryMethod.svg)
+
 ### Abstract Factory
 
 Please go to the branch `supermarket` to see its implementation
+
+![abstract factory](img/abstractFactory.svg)
 
 ## Structural Patterns
 
@@ -61,13 +65,19 @@ Take care of effective communication and the assignment of responsibilities betw
 
 Please go to the branch `composite` to see its implementation.
 
+![composite](img/composite.svg)
+
 ### Decorator
 
 Please go to the branch `decorator` to see its implementation.
 
+![decorator](img/decorator.svg)
+
 ### Flyweight
 
 Please go to the branch `flyweight` to see its implementation.
+
+![flyweight](img/flyweight.svg)
 
 ## Behavioral Patterns
 
